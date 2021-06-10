@@ -1,0 +1,23 @@
+<div class="cover">
+  <div class="container" *ngFor="let data of moreData">
+    <a [routerLink]="['/pokemon', data.id]">
+      <div class="name">
+        <p>{{ data.name }}</p>
+      </div>
+      <div class="img">
+        <img [src]="data.sprites.front_default" alt="" class="img-poki" />
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="footer">
+  <div id="btn" (click)="nextLink()">
+    <span class="noselect">Next</span>
+    <div id="circle"></div>
+  </div>
+  <div id="btn" (click)="previousLink()" *ngIf="isPrevious">
+    <span class="noselect">Previous</span>
+    <div id="circle"></div>
+  </div>
+</div>

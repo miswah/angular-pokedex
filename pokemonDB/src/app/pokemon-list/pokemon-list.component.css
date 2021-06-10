@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+.container {
+  background-color: grey;
+  margin: 1em;
+}
+
+.img {
+  background-color: black;
+  display: grid;
+  justify-content: center;
+}
+
+.name {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 2vw;
+  padding: 0.1em;
+}
+
+.cover {
+  display: grid;
+  grid-template-columns: repeat(3, 4fr);
+}
+
+.img-poki {
+  height: 10vw;
+}
+
+.container2 {
+  background-color: rgba(233, 67, 38, 0.986);
+  display: grid;
+  justify-items: center;
+}
+
+.logo {
+  height: 4vh;
+  padding: 5px;
+}
+
+@media (min-width: 1020px) {
+  .logo {
+    height: 7vh;
+    padding: 5px;
+  }
+}
+
+.footer {
+  padding: 5em;
+  display: grid;
+  grid-template-columns: repeat(2, 6fr);
+  justify-content: center;
+  grid-gap: 10px;
+}
+
+#btn {
+  background: #222;
+  height: 50px;
+  min-width: 150px;
+  border: none;
+  border-radius: 10px;
+  color: #eee;
+  font-size: 40px;
+  font-family: "Cookie", cursive;
+  position: relative;
+  transition: 1s;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding-top: 5px;
+}
+
+#btn #circle {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  overflow: hidden;
+  transition: 500ms;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#btn:hover {
+  background-color: grey;
+}
+
+#btn:hover #circle {
+  height: 50px;
+  width: 90vh;
+  left: 0;
+  border-radius: 0;
+  border-bottom: 2px solid #eee;
+}
