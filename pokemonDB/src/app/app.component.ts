@@ -8,4 +8,5 @@ import { PokemonListService } from './pokemon-list.service';
 })
 export class AppComponent {
   title = 'pokemonDB';
+  public name: string;
 }

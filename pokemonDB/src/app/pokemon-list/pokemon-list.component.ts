@@ -8,8 +8,8 @@ import { PokemonListService } from '../pokemon-list.service';
 })
 export class PokemonListComponent implements OnInit {
   pokemon: any;
+
   moreData: any[] = [];
-  imagesUrl: any[] = [];
   isPrevious = false;
 
   constructor(private pokedex: PokemonListService) {}
@@ -33,6 +33,7 @@ export class PokemonListComponent implements OnInit {
 
   getPoke() {
     this.moreData = [];
+
     return this.pokemon.results.forEach((element) => {
       this.pokedex.getMoreData(element.name).subscribe((r) => {
         this.moreData.push(r);

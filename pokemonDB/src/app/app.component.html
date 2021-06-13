@@ -1,13 +1,19 @@
 <div class="container">
-  <a [routerLink]="['/pokemon']">
-    <img
-      src="https://www.pinclipart.com/picdir/big/379-3791327_pokemon-logos-png-vector-pokemon-logo-transparent-background.png"
-      alt=""
-      class="logo"
-    />
-  </a>
+  <div id="logo">
+    <a [routerLink]="['/pokemon']">
+      <img
+        src="https://www.pinclipart.com/picdir/big/379-3791327_pokemon-logos-png-vector-pokemon-logo-transparent-background.png"
+        alt=""
+        class="logo"
+      />
+    </a>
+  </div>
+  <div id="search-bar">
+    <input type="text" placeholder="Search Pokemon" [(ngModel)]="name" />
+    <a [routerLink]="['/pokemon', name]">
+      <button style="margin-left: 5px">Search</button>
+    </a>
+  </div>
 </div>
-
-<!-- <app-pokemon-list></app-pokemon-list> -->
 
 <router-outlet></router-outlet>

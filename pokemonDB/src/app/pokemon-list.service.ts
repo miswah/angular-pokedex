@@ -18,4 +18,8 @@ export class PokemonListService {
   getLink(link: string) {
     return this.http.get(`${link}`);
   }
+
+  getDetails(id) {
+    return this.http.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
+  }
 }
